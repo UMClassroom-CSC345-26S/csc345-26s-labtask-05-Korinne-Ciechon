@@ -1,0 +1,11 @@
+p,q,r,p=>(q|r),p|q|r,~q=>(p|~r),(q&r)=>p,A,q&(r=>p)
+T,T,T,T,T,T,T,T,TRUE
+T,T,F,T,T,T,T,T,TRUE
+T,F,T,T,T,T,T,T,
+T,F,F,F,-------------,-------------,-------------,-------------,-------------
+F,T,T,T,T,T,F,-------------,-------------
+F,T,F,T,T,T,T,T,TRUE
+F,F,T,T,T,F,-------------,-------------,-------------
+F,F,F,T,F,-------------,-------------,-------------,-------------
+,,,,,,,,
+"No a logical consequence. There exists a row where all axioms are true, but the conjecture is false.",,,,,,,,

@@ -1,0 +1,66 @@
+SUMO STARTING POINTS
+
+CFPNC_2026	  instance  FootballUS
+Miami_Hurricanes  instance  SportsTeam
+Indiana_Hoosiers  instance  SportsTeam
+20_January_2026 instance  Day
+27		  instance  NonnegativeInteger
+21		  instance  NonnegaticeInteger
+Carson_Beck	  instance  Man
+
+
+TO CAPTURE
+
+Miami_Hurricanes   lost  	  CFPNC_2026
+Indiana_Hoosiers   won  	  CFPNC_2026
+20_January_2026    is_date	  CFPNC_2026
+27                 winning_score  CFPNC_2026
+21		   losing_score   CFPNC_2026
+Carson_Beck        played_in      CFPNC_2026
+Carson_Beck        member	  Miami_Hurricanes
+
+
+SUMO SUBCLASS HIERARCHIES
+
+CFPNC_2026 -> FootballUS hierarchy
+FootballUS            subclass  TeamSport
+TeamSport             subclass  Sport
+Sport                 subclass  RecreationOrExercise
+RecreationOrExercise  subclass  Process
+Process               subclass  Physical
+Physical              subclass  Entity
+
+Miami_Hurricanes/Indiana_hoosiers -> SportsTeam hierarchy
+SportsTeam    subclass  Organization
+Organization  subclass  Group
+Group         subclass  Agent
+Agent         subclass  Object
+Object        subclass  Physical
+Physical      subclass  Entity
+
+20_January_2026 -> day hierarchy
+Day           subclass  TimeInterval
+TimeInterval  subclass  TimeMeasure
+TimeMeasure   subclass  Abstract
+Abstract      subclass  Entity
+
+27/21 -> NonnegativeInteger Hierarchy
+NonnegativeInteger  subclass  Integer
+Integer             subclass  RationalNumber
+RationalNumber      subclass  RealNumber
+RealNumber          subclass  Number
+Number              subclass  Quantity
+Quantity            subclass  Abstract
+Abstract            subclass  Entity
+
+Carson_Beck -> Man Hierarchy
+Man       subclass  Human
+Human     subclass  Animal
+Animal    subclass  Organism
+Organism  subclass  Object
+Object    subclass  Physical
+Physical  subclass  Entity
+
+
+
+
